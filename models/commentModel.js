@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 //route handler 
 const commentSchema = new mongoose.Schema({
     post:{
-        type: mongoose.Schema.Types.ObjectIf,
+        type: mongoose.Schema.Types.ObjectId,
         ref:"Post",
     },
     user:{
@@ -18,4 +18,4 @@ const commentSchema = new mongoose.Schema({
     }
 });
 //export
-module.exports= mongoose.model("Comments",commentSchema);
+module.exports = mongoose.model("Comment", commentSchema);
